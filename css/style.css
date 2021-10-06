@@ -1,0 +1,63 @@
+:root {
+  --strong-cyan: rgb(38, 192, 171);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --light-gray-cyan: hsl(185, 41%, 84%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--light-gray-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  font-family: "Space Mono", monospace;
+}
+.header {
+  height: 30%;
+}
+.main {
+  width: 70%;
+  height: 40%;
+  background-color: var(--white);
+  border-radius: 16px/19px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+.container--text {
+  width: 50%;
+}
+.container--text__bill {
+  flex-direction: column;
+  position: relative;
+}
+.container--text__bill-form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+  background-color: hsl(189, 41%, 97%);
+}
+.container--text__bill-form_img {
+  position: absolute;
+  left: 0px;
+  height: 55%;
+}
+.container--text__bill-form_input {
+  background-color: hsl(189, 41%, 97%);
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  color: var(--Very-dark-cyan);
+  font-weight: 700;
+  font-size: 24px;
+  text-align: right;
+}
+.container--text__bill-form_input:focus {
+  outline: var(--strong-cyan) auto 1px;
+}
