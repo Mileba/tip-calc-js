@@ -8,6 +8,7 @@
   margin: 0px;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: "Space Mono", monospace;
 }
 body {
   background-color: var(--light-gray-cyan);
@@ -16,14 +17,12 @@ body {
   align-items: center;
   height: 100vh;
   justify-content: center;
-  font-family: "Space Mono", monospace;
 }
 .header {
   height: 30%;
 }
 .main {
   width: 70%;
-  height: 40%;
   background-color: var(--white);
   border-radius: 16px/19px;
   padding: 30px;
@@ -46,6 +45,7 @@ body {
 .container--text__bill-form_img {
   position: absolute;
   left: 0px;
+  bottom: -25%;
   height: 55%;
 }
 .container--text__bill-form_input {
@@ -57,7 +57,28 @@ body {
   font-weight: 700;
   font-size: 24px;
   text-align: right;
+  padding: 6%;
 }
 .container--text__bill-form_input:focus {
   outline: var(--strong-cyan) auto 1px;
+}
+.container--text__tip {
+  margin-top: 50px;
+}
+.container--text__tip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container--text__tip-grid-items {
+  width: 100px;
+  height: 50px;
+  margin: 18px 25px 18px 0px;
+  text-align: center;
+  background-color: var(--Very-dark-cyan);
+  color: white;
+}
+.container--text__tip-grid-input {
+  width: 100px;
+  margin: 18px 25px 18px 0px;
 }
