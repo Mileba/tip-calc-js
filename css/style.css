@@ -32,7 +32,8 @@ body {
   justify-content: space-around;
 }
 .container--text {
-  width: 50%;
+  /* width: 50%; */
+  padding: 2%;
 }
 .container--text__bill {
   flex-direction: column;
@@ -93,7 +94,7 @@ body {
   border-radius: 5px;
 }
 .container--text__number {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .container--text__number-form_avatar {
@@ -117,4 +118,42 @@ body {
 .container--screen {
   background-color: var(--Very-dark-cyan);
   border-radius: 19px/17px;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  width: 50%;
 }
+.tip-amount {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 90px;
+  justify-content: space-between;
+}
+.tip-amount__text h4 {
+  color: white;
+  font-size: 12px;
+}
+.tip-amount__text p {
+  color: hsl(189, 41%, 97%);
+  font-size: 10px;
+}
+.tip-amount__display {
+  /* height: 100%; */
+}
+.tip-amount__display p {
+  color: var(--strong-cyan);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+.reset {
+  /* margin-top: 45%; */
+  border-radius: 4px/4px;
+  padding: 10px;
+  color: var(--Very-dark-cyan);
+  background-color: var(--strong-cyan);
+  font-weight: 500;
+}
+/* Would continue design later */

@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
     <link
       rel="icon"
       type="image/png"
@@ -44,11 +45,11 @@
         <div class="container--text__tip">
           <h4>Select Tip %</h4>
           <div class="container--text__tip-grid">
-            <button class="container--text__tip-grid-items">5%</button>
-            <button class="container--text__tip-grid-items">10%</button>
-            <button class="container--text__tip-grid-items">15%</button>
-            <button class="container--text__tip-grid-items">25%</button>
-            <button class="container--text__tip-grid-items">50%</button>
+            <button class="container--text__tip-grid-items grid-items-1">5%</button>
+            <button class="container--text__tip-grid-items grid-items-2">10%</button>
+            <button class="container--text__tip-grid-items grid-items-3">15%</button>
+            <button class="container--text__tip-grid-items grid-items-4">25%</button>
+            <button class="container--text__tip-grid-items grid-items-5">50%</button>
             <input placeholder="Custom" class="container--text__tip-grid-input"></input>
           </div>
         </div>
@@ -61,8 +62,25 @@
         </div>
       </div>
       <div class="container--screen">
-         Tip Amount /
-        person Total / person Reset
+        <div class="tip-amount">
+          <div class="tip-amount__text">
+            <h4>Tip Amount</h4>
+            <p>/ person</p>
+          </div>
+          <div class="tip-amount__display">
+            <p>$4.25</p>
+          </div>
+        </div>
+        <div class="tip-amount">
+          <div class="tip-amount__text">
+            <h4>Tip Total</h4>
+            <p>/ person</p>
+          </div>
+          <div class="tip-amount__display">
+            <p>$4.25</p>
+          </div>
+        </div>
+        <button class="reset">Reset</button>
       </div>
     </main>
     
