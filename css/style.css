@@ -22,18 +22,21 @@ body {
   height: 30%;
 }
 .main {
+  display: flex;
   width: 70%;
   background-color: var(--white);
   border-radius: 16px/19px;
   padding: 30px;
   margin-bottom: 20px;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .container--text {
   width: 50%;
 }
 .container--text__bill {
   flex-direction: column;
-  position: relative;
+  /* position: relative; */
 }
 .container--text__bill-form {
   display: flex;
@@ -42,13 +45,11 @@ body {
   height: 30px;
   background-color: hsl(189, 41%, 97%);
 }
-.container--text__bill-form_img {
-  position: absolute;
-  left: 0px;
-  bottom: -25%;
-  height: 55%;
-}
+
 .container--text__bill-form_input {
+  background-image: url(../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   background-color: hsl(189, 41%, 97%);
   width: 100%;
   height: 100%;
@@ -57,7 +58,8 @@ body {
   font-weight: 700;
   font-size: 24px;
   text-align: right;
-  padding: 6%;
+  padding: 5%;
+  border-radius: 5px;
 }
 .container--text__bill-form_input:focus {
   outline: var(--strong-cyan) auto 1px;
@@ -71,14 +73,48 @@ body {
   justify-content: space-between;
 }
 .container--text__tip-grid-items {
-  width: 100px;
-  height: 50px;
-  margin: 18px 25px 18px 0px;
+  width: 25%;
+  height: 40px;
+  margin: 0px 25px 18px 0px;
   text-align: center;
   background-color: var(--Very-dark-cyan);
   color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 0px;
+}
+.container--text__tip-grid-items:hover {
+  background-color: var(--strong-cyan);
+  color: var(--Very-dark-cyan);
 }
 .container--text__tip-grid-input {
-  width: 100px;
-  margin: 18px 25px 18px 0px;
+  width: 25%;
+  margin: 0px 25px 18px 0px;
+  border-radius: 5px;
+}
+.container--text__number {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.container--text__number-form_avatar {
+  background-image: url(../images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(189, 41%, 97%);
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  color: var(--Very-dark-cyan);
+  font-weight: 700;
+  font-size: 24px;
+  text-align: right;
+  padding: 5%;
+  border-radius: 5px;
+}
+.container--text__number-form_avatar:focus {
+  outline: var(--strong-cyan) auto 1px;
+}
+.container--screen {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 19px/17px;
 }
