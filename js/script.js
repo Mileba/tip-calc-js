@@ -10,13 +10,19 @@ const button5 = document.querySelector(".grid-items-5");
 // -------------------------------------------------------
 const body = document.querySelector(".main");
 const container = document.querySelector(".container--text");
+const screen = document.querySelector("container--screen");
 
 const billForm = document.querySelector(".container--text__bill-form");
 const billInput = document.querySelector(".container--text__bill-form_input");
 const numImput = document.querySelector(".container--text__number-form_avatar");
+const tipTotalPerPerson = document.querySelector(".tip-total");
+const tipAmountPerPerson = document.querySelector(".tip-person");
 // Logic
-
-let bill = 0;
+let tipTotalValue = `$${0}`;
+let tipAmountValue = `$${0}`;
+tipTotalPerPerson.innerHTML = tipTotalValue;
+tipAmountPerPerson.innerHTML = tipAmountValue;
+let bill = "";
 let numPeople = 1;
 let buttonClicked;
 billInput.value = bill;
@@ -30,18 +36,17 @@ body.addEventListener("submit", function (e) {
   const calcTip = function () {
     const tipPercentage = buttonClicked / 100;
     const tipAmount = bill * tipPercentage;
-    const tipAmountPerPerson = tipAmount / numPeople;
-    const billTotal = bill / numPeople;
-    console.log(billTotal);
-    const tipTotal = billTotal + tipAmountPerPerson;
-    console.log(tipTotal);
+    const tipAmountPerPersons = +(tipAmount / numPeople).toFixed(2);
+    tipAmountPerPerson.innerHTML = `$${tipAmountPerPersons}`;
+    const billTotal = +(bill / numPeople).toFixed(2);
+    tipTotalPerPerson.innerHTML = `$${+(
+      billTotal + tipAmountPerPersons
+    ).toFixed(2)}`;
   };
 
   button1.addEventListener("click", function () {
     buttonClicked = 5;
     calcTip();
-    // console.log(tipAmountPerPerson);
-    // console.log(buttonClicked, tipPercentage);
   });
   button2.addEventListener("click", function () {
     buttonClicked = 10;
